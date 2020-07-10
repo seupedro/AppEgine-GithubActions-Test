@@ -8,5 +8,5 @@ def ping():
 
 
 @app.route("/")
-def ping():
+def root():
     return "Flask App Engine"
