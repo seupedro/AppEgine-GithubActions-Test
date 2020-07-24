@@ -15,4 +15,4 @@ def root():
 
 @app.route("/env")
 def env():
-    return os.environ
+    return str(os.environ) 
