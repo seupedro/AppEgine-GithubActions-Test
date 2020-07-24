@@ -34,8 +34,8 @@ jobs:
         
     - name: Set env variables from github secrets
       run: |
-        echo '' >> app.yaml
-        echo 'env_variables:' >> app.yaml
+        echo ' ' >> app.yaml
+        echo env_variables: >> app.yaml
         echo "  TEST_VAR: ${{ secrets.ENV_VAR }}"
         echo app.yaml
 
