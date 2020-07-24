@@ -14,5 +14,5 @@ def root():
 
 
 @app.route("/env")
-def root():
+def env():
     return os.environ
