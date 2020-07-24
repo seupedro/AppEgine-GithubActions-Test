@@ -16,7 +16,7 @@ def root():
 
 @app.route("/env")
 def env():
-    env = os.popen('env')
+    env = os.popen('env | grep -v -E GAE')
     return str(env.read()) 
 
 
