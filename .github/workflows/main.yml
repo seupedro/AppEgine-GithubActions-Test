@@ -31,6 +31,7 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+<<<<<<< HEAD
         
     - name: Set env variables from github secrets
       run: |
@@ -38,6 +39,8 @@ jobs:
         echo env_variables: >> app.yaml
         echo "  TEST_VAR: ${{ secrets.ENV_VAR }}"
         echo app.yaml
+=======
+>>>>>>> parent of ce913dd... merge
 
     - name: Initialize Google Cloud SDK
       uses: zxyle/publish-gae-action@master
