@@ -20,13 +20,13 @@ def env():
     return str(pprint.pprint(env)) 
 
 
-@app.route("/echo")
+@app.route("/cat")
 def echo():
-    echo = os.popen('echo app.yaml')
-    return str(echo.read())
+    cat = os.popen('cat app.yaml')
+    return str(cat.read())
 
 
 @app.route("/ls")
 def ls():
-    echo = os.popen('ls -l')
-    return str(echo.read())
+    ls = os.popen('ls -l')
+    return str(ls.read())
