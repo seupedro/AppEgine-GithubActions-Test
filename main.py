@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 app = Flask(__name__)
 
@@ -10,3 +11,8 @@ def ping():
 @app.route("/")
 def root():
     return "Flask App Engine"
+
+
+@app.route("/env")
+def root():
+    return os.environ
