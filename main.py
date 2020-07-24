@@ -1,4 +1,5 @@
 import os
+import pprint
 from flask import Flask
 app = Flask(__name__)
 
@@ -15,4 +16,5 @@ def root():
 
 @app.route("/env")
 def env():
-    return str(os.environ) 
+    env = str(os.environ).replace('environ(', '').replace(')', '')
+    return str(pprint.pprint(env)) 
