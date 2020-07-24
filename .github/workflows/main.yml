@@ -37,7 +37,7 @@ jobs:
         echo '' >> app.yaml
         echo 'env_variables:' >> app.yaml
         echo "  TEST_VAR: ${{ secrets.ENV_VAR }}"
-        grep TEST app.yaml
+        echo app.yaml
 
     - name: Initialize Google Cloud SDK
       uses: zxyle/publish-gae-action@master
