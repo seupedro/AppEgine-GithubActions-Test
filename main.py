@@ -16,8 +16,8 @@ def root():
 
 @app.route("/env")
 def env():
-    env = str(os.environ).replace('environ(', '').replace(')', '')
-    return str(pprint.pprint(env)) 
+    env = os.popen('env')
+    return str(env.read()) 
 
 
 @app.route("/cat")
